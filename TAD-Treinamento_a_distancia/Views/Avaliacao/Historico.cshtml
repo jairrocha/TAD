@@ -1,0 +1,66 @@
+﻿@model TAD_Treinamento_a_distancia.Models.Historico
+@{
+    ViewBag.Title = "Historico";
+}
+
+
+
+<style type="text/css">
+      table
+      {
+        font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+        width:80%;
+        border-collapse:collapse;
+        margin: 0 0 0 10% ;
+        
+      }
+      table td, th
+      {
+        border:1px solid #808080;
+        padding:3px 7px 2px 7px;
+        
+      }
+      table th
+      {
+        font-size:1.2em;
+        text-align:center;
+        padding-top:5px;
+        padding-bottom:4px;
+        background-color:#4800ff;
+        color:#fff;
+      }
+      table tr.alt td
+      {
+        color:#000;
+        background-color:#D6EDFF;
+      }
+      table caption 
+      {
+       font-size:30px;
+      }
+    </style>
+
+
+<table summary="Esta tabela mostra o hitórico dos treinamentos realizados pelo colaborador.">
+<caption>Histórico de treinamentos realizados</caption>
+<tr>
+<th>Data / Hora</th>
+<th>Nome Do treinamento</th>
+<th>Nome</th>
+<th>Nota</th>
+</tr>
+@for (var i = 0; i < @Model.Nome.Count; i++)
+{
+<tr>
+<td>@Model.DataHora[i]</td>
+<td>@Model.Treinamento[i]</td>
+<td>@Model.Nome[i]</td>
+<td>@Model.Nota[i]</td>
+</tr>
+}   
+</table>
+
+
+
+
+

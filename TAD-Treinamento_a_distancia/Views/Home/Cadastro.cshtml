@@ -1,0 +1,58 @@
+﻿@model TAD_Treinamento_a_distancia.Models.Pessoa
+
+@{
+    ViewBag.Title = "Cadastro";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("Cadastro","Home",FormMethod.Post))
+{
+    <div class="imgFudo">                    
+        <div class="secao">  
+            <div class="login">
+                <div style="font-size:15px;color:#000">Nome:</div>
+                @Html.TextBoxFor(model => model.Nome)
+                @Html.ValidationMessageFor(model => model.Nome)
+            </div><br/><br/>
+            <div class="login">
+                <div style="font-size:15px;color:#000">Email:</div>
+                @Html.EditorFor(model => model.Usuario.Email)
+                @Html.ValidationMessageFor(model => model.Usuario.Email)
+            </div><br/><br/>
+            <div class="login">
+                <div style="font-size:15px;color:#000">Nome de usuario:</div>
+                @Html.EditorFor(model => model.Usuario.Login)
+                @Html.ValidationMessageFor(model => model.Usuario.Login)
+            </div><br/><br/>
+            <div class="login">
+                <div style="font-size:15px;color:#000">Senha:</div>
+                @Html.PasswordFor(model => model.Usuario.Senha)
+                @Html.ValidationMessageFor(model => model.Usuario.Senha)
+            </div><br/><br/>
+            <div class="login">
+                <div style="font-size:15px;color:#000">Confirme a senha:</div>
+                @Html.PasswordFor(model => model.Usuario.ConfirmarSenha)
+                @Html.ValidationMessageFor(model => model.Usuario.ConfirmarSenha)
+                @*</div><br/><br/>*@
+                <div style="color: #0000ff">@ViewBag.Mensagem</div>
+                <br /><br /><br />
+                <div class="login">
+                    <button type="submit"  class="btn btn-primary" style="font-size:12px; width:100px; height:28px;">Cadastrar</button>
+                </div>
+                <br /><br/>
+                <div class="esqSenha">
+                    <p>@Html.ActionLink("Informar Login e senha","Login","Home")</p>
+                </div>
+                
+                
+            </div>
+            </div>
+    </div>        
+}
+            
+        
+
+
+@*@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}*@

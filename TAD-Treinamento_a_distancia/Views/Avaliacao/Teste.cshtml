@@ -1,0 +1,56 @@
+﻿@model TAD_Treinamento_a_distancia.Models.CarregarAvaliacao
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Teste</title>
+    <link href="~/Content\Site.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Teste", "Avaliacao", FormMethod.Post))
+        {
+
+            <fieldset style="height: 1000px; width:800px; margin-left: 250px">
+                <legend>
+                    Questionário
+                </legend>
+                <ol>
+                    @for (int i = 0; i < @Model.Enunciados.Count; i++)
+                    
+                    {
+                        <br />
+                        <li>@Model.Enunciados[i]</li>
+                        <br />
+                        string c = (string)Session["Curso"];
+                        Model.BuscaAlternativas(c, i+1);
+                        <ol style="list-style:lower-alpha">
+                            @for (int j = 0; j < @Model.Alternativas.Count; j++)
+                            {
+                                <li>
+
+                                    @Html.RadioButton("radio" + @i, @Model.Alternativas[j],false) @Model.Alternativas[j]
+
+                                </li>
+
+                            }
+                        </ol>
+
+                    }
+
+                </ol>
+
+            </fieldset>
+            
+            
+            <center><button type="submit" style="height:50px ; width:200px; font-size:20px">Finalizar Prova</button></center>
+    }
+</div>
+</body>
+</html>

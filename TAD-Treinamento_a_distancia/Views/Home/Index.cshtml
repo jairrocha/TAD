@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+
+
+<center>
+<div id="myCarousel" class="carousel slide">
+   <!-- Itens de carousel -->
+   <div class="carousel-inner">
+     <div class="active item"><img src="~/Content/themes/base/images/1.jpg"  alt=""></div>
+     <div class="item"><img src="~/Content/themes/base/images/1.jpg"  alt=""></div>
+     <div class="item"><img src="~/Content/themes/base/images/1.jpg"  alt=""></div>
+   </div>
+   <!-- Navegador do carousel -->
+   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+  </div>
+</center>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/bootstrap")
+}

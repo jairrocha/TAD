@@ -1,0 +1,49 @@
+﻿@model TAD_Treinamento_a_distancia.Models.Pessoa
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+    @using(Html.BeginForm("Login","Home", FormMethod.Post))
+    {
+    
+        <div class="imgFudo">
+    
+            <div class="secao">    
+        
+                <div class="login">
+                    <div style="font-size:15px; color:#000">Login:</div>
+                        @Html.EditorFor(model => model.Usuario.Login )
+                        @Html.ValidationMessageFor(model=> model.Usuario.Login) 
+                </div>
+        
+                <div class="login">
+                    <br/><br/>
+                    <div style="font-size:15px;color:#000">Senha:</div>
+                    @Html.PasswordFor(model => model.Usuario.Senha)
+                    @Html.ValidationMessageFor(model => model.Usuario.Senha)
+                </div>
+                <br /><br /><br /><br /><br /><br /><br />
+                <div class="login">
+                    <button type="submit"  class="btn btn-primary" style="font-size:12px; width:100px; height:28px;">Entrar</button>
+                </div>
+                <br /><br /><br />
+                <div class="esqSenha">
+                    <p>@Html.ActionLink("Esqueceu login ou senha?","RecuperarSenha","Home")</p>
+                    <p>@Html.ActionLink("Cadastrar Usuário","Cadastro","Home")</p>
+                </div>
+            </div>
+        </div>
+    
+
+    }
+
+
+
+@section Scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

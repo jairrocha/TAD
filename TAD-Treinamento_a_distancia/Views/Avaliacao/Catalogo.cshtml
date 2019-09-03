@@ -1,0 +1,29 @@
+﻿@using Microsoft.Ajax.Utilities
+@model TAD_Treinamento_a_distancia.Models.CarregarTreinamentos
+
+@{
+    ViewBag.Title = "Catalogo";
+}
+
+@using (@Html.BeginForm("Catalogo", "Avaliacao", FormMethod.Post))
+{
+    
+   
+    for (int i = 0; i < @Model.LinkVideo.Count; i++)
+    {
+        <div id="videos">    
+        <fieldset  style="width: 290px; float: left">
+            <legend>@Model.Nome[i]</legend>
+            <video width="260" height="170" controls>
+                <source src="~/Content/themes/base/videos/@Model.LinkVideo[i]" type="video/mp4">
+            </video>
+            <p>
+               
+               <button type="submit" id="curso" name="curso" value="@Model.Nome[i]">Realizar Prova</button>
+            </p>
+        </fieldset>
+        </div>
+
+    }
+
+}

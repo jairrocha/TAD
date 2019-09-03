@@ -1,0 +1,215 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    background-color: #fff;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ff0000;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color:#f00;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+    font-size: 12px;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+    Height:26px;
+    Width:300px;
+    font-size: 14px;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+    font-size: 12px;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+#footer{
+    padding: 0 0 1px 0;
+    background: #000;
+    height: 40px;
+    text-align:center;
+    font-size:15px;
+    color:#808080;
+    
+    
+   
+}
+
+#texto-footer{
+    padding:8px 0 0 0;
+}
+
+
+
+#conteudo{
+    height:800px;
+    
+    
+      
+}
+
+#catalogo-indice{
+    margin: 0 0 0 20px;
+}
+
+.videos{
+    width: 290px;
+    float: left;
+    margin-left: 40px;
+ 
+    
+}
+
+#sobre{
+  margin: 0 0 0 20px;
+}
+
+#imagem-sobre{
+    height:290px;
+    width:301px;
+    margin: 150px 0 0 350px;
+}
+
+.questoes{
+    font-size: 16px;
+    color:#232323;
+    
+}
+
+
+/**//**/
+.secao{
+    height: 380px;
+    width: 381px;
+    margin: 0 0 0 600px;
+    /*background:#040f28;*/
+    
+
+}
+
+
+.login{
+
+    /*border-radius: 1px;*/
+    Height:15px;
+    font-size: 14px;
+    
+   
+}
+
+
+
+.fundo
+{
+    background-image: url(/Content/themes/base/images/tad_background.png);
+    background-repeat: no-repeat;
+    height:700px;
+    width:1020px;
+    margin-top: 0px;
+    margin-left: 180px;
+    background-size:1000px;
+    /*border: 1px solid;*/
+    
+    
+}
+
+.imgFudo 
+{
+    height: 380px;
+    width: 550px;
+    margin: 90px 0 0 30px;
+    background-image: url(/Content/themes/base/images/1.jpg);
+    background-repeat: no-repeat;
+    background-size:590px 435px;
+    background-position:center;
+}
+
+.fundofooter 
+{
+    padding: 0 0 1px 0;
+    background: #000;
+    height: 40px;
+    text-align:center;
+    font-size:15px;
+    color:#808080;
+    margin-top:150px;
+
+}
+
+.Corpo {
+
+
+    height:1000px;
+    width:1000px;
+    margin-top: 40px;
+    margin-left: 200px;
+    /*border:1px solid #808080;*/
+    /*border-radius:10px;*/
+    background-color:#fff;
+}
+
+.tad {
+    height: 50px;
+    
+}
+
+.fd 
+{
+    height:1050px;
+    width:1365px;
+    /*background-color:#ddd;*/
+
+}
+.esqSenha 
+{
+    color:#0f13d0;
+    font-size:14px;
+}
+
+.largura {
+    width: 40px;
+}

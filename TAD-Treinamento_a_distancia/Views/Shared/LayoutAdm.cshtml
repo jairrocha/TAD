@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bootsrap")
+    @Scripts.Render("~/bundles/modernizr")
+    
+
+</head>
+<body>
+    <div class="fd">
+    <div class="Corpo">
+    <div class="tad"><h2>TAD - Treinamento a distância</h2></div>
+    
+    
+
+
+
+    <nav class="navbar navbar-inverse" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+	  </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>@Html.ActionLink("Home","Index","Home")</li>
+          <li>@Html.ActionLink("Treinamento", "Catalogo" , "Avaliacao")</li>
+          <li>@Html.ActionLink("Histórico", "Historico" , "Avaliacao")</li>
+          <li>@Html.ActionLink("Sobre", "Sobre","Sobre")</li>
+          <li>@Html.ActionLink("Sair","Sair","Home")</li>
+        </ul>
+	  </div>	
+    </nav>
+    <div id="conteudo">
+      @RenderBody()
+    </div>
+    <div id="footer">
+        <div id="texto-footer">
+            <p>TAD | Treinamento a distância</p>
+        </div>
+   </div>
+   
+   
+</div>
+</div>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿@model TAD_Treinamento_a_distancia.Models.Pessoa
+
+@{
+    ViewBag.Title = "RecuperarSenha";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+    
+    
+    
+      
+    @using(Html.BeginForm("RecuperarSenha","Home", FormMethod.Post))
+    {
+    
+        <div class="imgFudo">
+    
+            <div class="secao">    
+        
+                <div class="login">
+                    <div style="font-size:15px; color:#000;">Email:</div>
+            
+                    @Html.EditorFor(model => model.Usuario.Email)
+                    @Html.ValidationMessageFor(model => model.Usuario.Email)    
+                    <p style="color:#0026ff; font-size:14px">@ViewData["status"]</p>
+                </div>
+        
+                <br /><br /><br /><br />
+                <div class="login">
+                    <button type="submit"  class="btn btn-primary" style="font-size:12px; width:100px; height:28px;">Enviar</button>
+                </div>
+                <br /><br /><br />
+                <p style="font-size:14px">@Html.ActionLink("Informar Login e senha","Login","Home")</p>
+  
+       
+            </div>
+        </div>
+    
+
+    }
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
